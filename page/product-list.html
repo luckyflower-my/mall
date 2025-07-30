@@ -1,0 +1,147 @@
+<!-- product-list.html -->
+<div class="content-card">
+    <div class="card-title">商品列表管理</div>
+    <div style="padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <button class="btn btn-primary" style="margin-right: 10px;">
+                    <i class="fas fa-plus"></i> 添加商品
+                </button>
+                <button class="btn" style="background: #95a5a6; color: white;">
+                    <i class="fas fa-download"></i> 批量导入
+                </button>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" placeholder="搜索商品..." style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; width: 200px;">
+                <select style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option>全部分类</option>
+                    <option>数码电子</option>
+                    <option>家用电器</option>
+                    <option>家居家纺</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">商品列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>商品图片</th>
+                <th>商品名称</th>
+                <th>分类</th>
+                <th>价格</th>
+                <th>库存</th>
+                <th>销量</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div style="width: 50px; height: 50px; background: #f8f9fa; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-image" style="color: #bdc3c7;"></i>
+                    </div>
+                </td>
+                <td>高端无线蓝牙耳机</td>
+                <td>数码电子</td>
+                <td>¥599.00</td>
+                <td>68</td>
+                <td>156</td>
+                <td><span class="status completed">在售</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                    <button class="btn" style="background: #e74c3c; color: white;">下架</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="width: 50px; height: 50px; background: #f8f9fa; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-image" style="color: #bdc3c7;"></i>
+                    </div>
+                </td>
+                <td>全自动咖啡机</td>
+                <td>家用电器</td>
+                <td>¥1,299.00</td>
+                <td>12</td>
+                <td>89</td>
+                <td><span class="status shipped">在售</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                    <button class="btn" style="background: #e74c3c; color: white;">下架</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="width: 50px; height: 50px; background: #f8f9fa; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-image" style="color: #bdc3c7;"></i>
+                    </div>
+                </td>
+                <td>纯棉四件套</td>
+                <td>家居家纺</td>
+                <td>¥399.00</td>
+                <td>0</td>
+                <td>234</td>
+                <td><span class="status pending">缺货</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                    <button class="btn" style="background: #27ae60; color: white;">补货</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="width: 50px; height: 50px; background: #f8f9fa; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-image" style="color: #bdc3c7;"></i>
+                    </div>
+                </td>
+                <td>智能手表</td>
+                <td>数码电子</td>
+                <td>¥899.00</td>
+                <td>45</td>
+                <td>67</td>
+                <td><span class="status completed">在售</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                    <button class="btn" style="background: #e74c3c; color: white;">下架</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="content-card">
+    <div class="card-title">商品统计</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">商品总数</div>
+            <div class="info-value">128</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 本月新增 12 个
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">在售商品</div>
+            <div class="info-value">115</div>
+            <div class="info-change up">
+                <i class="fas fa-check-circle"></i> 正常销售
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">缺货商品</div>
+            <div class="info-value">8</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要及时补货
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">下架商品</div>
+            <div class="info-value">5</div>
+            <div class="info-change">
+                <i class="fas fa-pause-circle"></i> 暂停销售
+            </div>
+        </div>
+    </div>
+</div> 

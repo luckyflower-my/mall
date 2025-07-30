@@ -1,0 +1,108 @@
+<!-- order-pending.html -->
+
+<div class="content-card">
+    <div class="card-title">待处理订单概览</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">待付款订单</div>
+            <div class="info-value">12</div>
+            <div class="info-change down">
+                <i class="fas fa-clock"></i> 需要及时处理
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">待发货订单</div>
+            <div class="info-value">18</div>
+            <div class="info-change down">
+                <i class="fas fa-truck"></i> 准备发货
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">待审核订单</div>
+            <div class="info-value">5</div>
+            <div class="info-change down">
+                <i class="fas fa-search"></i> 需要审核
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">今日新增</div>
+            <div class="info-value">35</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增加 8
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">待处理订单列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>订单号</th>
+                <th>客户信息</th>
+                <th>商品信息</th>
+                <th>金额</th>
+                <th>下单时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#ORD-2023-00130</td>
+                <td>
+                    <div>张明</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">139****1234</div>
+                </td>
+                <td>
+                    <div>无线蓝牙耳机</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>¥568.00</td>
+                <td>2023-10-15 15:30</td>
+                <td><span class="status pending">待付款</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">提醒</button>
+                    <button class="btn" style="background: #e74c3c; color: white;">取消</button>
+                </td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00129</td>
+                <td>
+                    <div>李华</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">138****5678</div>
+                </td>
+                <td>
+                    <div>全自动咖啡机</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>¥1,248.00</td>
+                <td>2023-10-15 15:25</td>
+                <td><span class="status pending">待发货</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">查看</button>
+                    <button class="btn" style="background: #27ae60; color: white;">发货</button>
+                </td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00128</td>
+                <td>
+                    <div>王芳</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">137****9876</div>
+                </td>
+                <td>
+                    <div>智能手表</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>¥899.00</td>
+                <td>2023-10-15 15:20</td>
+                <td><span class="status pending">待审核</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">查看</button>
+                    <button class="btn" style="background: #27ae60; color: white;">审核</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

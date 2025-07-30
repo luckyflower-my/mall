@@ -1,0 +1,89 @@
+<!-- realtime.html -->
+<div class="content-card">
+    <div class="card-title">实时订单监控</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">实时订单数</div>
+            <div class="info-value">23</div>
+            <div class="info-change up">
+                <i class="fas fa-clock"></i> 实时更新
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">待处理订单</div>
+            <div class="info-value">8</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要及时处理
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">今日总收入</div>
+            <div class="info-value">¥12,456</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增长 15%
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">平均客单价</div>
+            <div class="info-value">¥541</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增长 8%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">最新订单列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>订单号</th>
+                <th>客户</th>
+                <th>商品</th>
+                <th>金额</th>
+                <th>下单时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#ORD-2023-00129</td>
+                <td>李明</td>
+                <td>无线蓝牙耳机</td>
+                <td>¥568.00</td>
+                <td>2023-10-15 14:30</td>
+                <td><span class="status pending">待付款</span></td>
+                <td><button class="btn btn-primary">处理</button></td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00128</td>
+                <td>张伟</td>
+                <td>全自动咖啡机</td>
+                <td>¥1,248.00</td>
+                <td>2023-10-15 14:25</td>
+                <td><span class="status shipped">已发货</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00127</td>
+                <td>王芳</td>
+                <td>纯棉四件套</td>
+                <td>¥356.00</td>
+                <td>2023-10-15 14:20</td>
+                <td><span class="status completed">已完成</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00126</td>
+                <td>刘强</td>
+                <td>智能手表</td>
+                <td>¥899.00</td>
+                <td>2023-10-15 14:15</td>
+                <td><span class="status pending">待发货</span></td>
+                <td><button class="btn btn-primary">发货</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div> 

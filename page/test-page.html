@@ -1,0 +1,32 @@
+<!-- test-page.html -->
+<div class="content-card">
+    <div class="card-title">测试页面</div>
+    <div style="padding: 20px;">
+        <h3>🎉 页面加载成功！</h3>
+        <p>这是一个测试页面，用于验证二级导航栏点击后页面加载功能是否正常工作。</p>
+        
+        <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <h4 style="color: #155724; margin: 0 0 10px 0;">✅ 功能说明</h4>
+            <ul style="margin: 0; color: #155724;">
+                <li>点击左侧一级菜单可以切换不同的模块</li>
+                <li>点击中间二级菜单可以加载对应的页面内容</li>
+                <li>每个页面都是独立的HTML文件</li>
+                <li>页面内容通过fetch API动态加载</li>
+            </ul>
+        </div>
+        
+        <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px;">
+            <h4 style="color: #856404; margin: 0 0 10px 0;">📝 当前状态</h4>
+            <p style="margin: 0; color: #856404;">
+                页面加载时间：<span id="loadTime"></span><br>
+                当前URL：<span id="currentUrl"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 显示页面加载信息
+    document.getElementById('loadTime').textContent = new Date().toLocaleString();
+    document.getElementById('currentUrl').textContent = window.location.href;
+</script> 

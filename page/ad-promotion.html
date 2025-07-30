@@ -1,0 +1,39 @@
+<!-- ad-promotion.html -->
+<div class="content-card">
+    <div class="card-title">广告推广管理</div>
+    <div style="padding: 20px;">
+        <form id="adForm" style="margin-bottom: 20px;">
+            <input type="text" name="adTitle" placeholder="广告标题" required style="width: 200px;">
+            <select name="adPage" style="width: 150px; margin-left:10px;">
+                <option value="home">首页轮播</option>
+                <option value="product">商品详情页</option>
+                <option value="member">会员中心</option>
+                <option value="activity">活动页</option>
+                <option value="checkout">结算页</option>
+                <option value="popup">弹窗广告</option>
+            </select>
+            <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建广告</button>
+        </form>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>广告标题</th>
+                    <th>投放页面</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>夏日大促</td>
+                    <td>首页轮播</td>
+                    <td>已上线</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">编辑</button>
+                        <button class="btn btn-sm btn-danger">下线</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

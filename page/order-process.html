@@ -1,0 +1,113 @@
+<!-- order-process.html -->
+
+<div class="content-card">
+    <div class="card-title">批量订单处理</div>
+    <div style="padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3>批量操作</h3>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-primary">
+                    <i class="fas fa-check"></i> 批量发货
+                </button>
+                <button class="btn" style="background: #27ae60; color: white;">
+                    <i class="fas fa-print"></i> 批量打印
+                </button>
+                <button class="btn" style="background: #f39c12; color: white;">
+                    <i class="fas fa-envelope"></i> 批量通知
+                </button>
+            </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h4>处理统计</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 10px;">
+                <div>
+                    <strong>待处理：</strong> 18 个订单
+                </div>
+                <div>
+                    <strong>已选择：</strong> <span id="selectedCount">0</span> 个订单
+                </div>
+                <div>
+                    <strong>预计时间：</strong> 5 分钟
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">待批量处理订单</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll"></th>
+                <th>订单号</th>
+                <th>客户</th>
+                <th>商品</th>
+                <th>金额</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="order-checkbox"></td>
+                <td>#ORD-2023-00130</td>
+                <td>张明</td>
+                <td>无线蓝牙耳机</td>
+                <td>¥568.00</td>
+                <td><span class="status pending">待发货</span></td>
+                <td><button class="btn btn-primary">处理</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="order-checkbox"></td>
+                <td>#ORD-2023-00129</td>
+                <td>李华</td>
+                <td>全自动咖啡机</td>
+                <td>¥1,248.00</td>
+                <td><span class="status pending">待发货</span></td>
+                <td><button class="btn btn-primary">处理</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="order-checkbox"></td>
+                <td>#ORD-2023-00128</td>
+                <td>王芳</td>
+                <td>智能手表</td>
+                <td>¥899.00</td>
+                <td><span class="status pending">待发货</span></td>
+                <td><button class="btn btn-primary">处理</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="order-checkbox"></td>
+                <td>#ORD-2023-00127</td>
+                <td>刘强</td>
+                <td>纯棉四件套</td>
+                <td>¥356.00</td>
+                <td><span class="status pending">待发货</span></td>
+                <td><button class="btn btn-primary">处理</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+// 全选功能
+document.getElementById('selectAll').addEventListener('change', function() {
+    const checkboxes = document.querySelectorAll('.order-checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = this.checked;
+    });
+    updateSelectedCount();
+});
+
+// 更新选中数量
+function updateSelectedCount() {
+    const checkedBoxes = document.querySelectorAll('.order-checkbox:checked');
+    document.getElementById('selectedCount').textContent = checkedBoxes.length;
+}
+
+// 监听单个复选框变化
+document.querySelectorAll('.order-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', updateSelectedCount);
+});
+</script>

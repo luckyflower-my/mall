@@ -1,0 +1,52 @@
+<!-- member-level.html -->
+<div class="content-card">
+    <div class="card-title">会员等级管理</div>
+    <div style="padding: 20px;">
+        <form id="levelForm" style="margin-bottom: 20px; display: flex; gap: 10px;">
+            <input type="text" name="levelName" placeholder="等级名称" required style="flex:1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <input type="number" name="levelValue" placeholder="成长值" required style="width:120px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <button type="submit" class="btn btn-primary">添加等级</button>
+        </form>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr style="background:#f5f5f5;">
+                    <th style="padding:8px;">等级名称</th>
+                    <th style="padding:8px;">成长值</th>
+                    <th style="padding:8px;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>黄金会员</td>
+                    <td>1000</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>白银会员</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="levelMsg" style="color: red; margin-top: 10px; display: none;"></div>
+    </div>
+</div>
+<script>
+document.getElementById('levelForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.levelName.value.trim();
+    const value = this.levelValue.value;
+    if (!name || !value) {
+        document.getElementById('levelMsg').innerText = '请填写等级名称和成长值';
+        document.getElementById('levelMsg').style.display = 'block';
+        return;
+    }
+    document.getElementById('levelMsg').style.display = 'none';
+    alert('等级添加成功！（仅演示）');
+    // 这里可以添加实际的添加逻辑
+});
+</script>

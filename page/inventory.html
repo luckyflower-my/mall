@@ -1,0 +1,73 @@
+<!-- inventory.html -->
+
+<div class="content-card">
+    <div class="card-title">库存管理</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">总库存商品</div>
+            <div class="info-value">128</div>
+            <div class="info-change up">
+                <i class="fas fa-boxes"></i> 库存充足
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">库存预警</div>
+            <div class="info-value">8</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要补货
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">缺货商品</div>
+            <div class="info-value">3</div>
+            <div class="info-change down">
+                <i class="fas fa-times-circle"></i> 急需补货
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">库存总值</div>
+            <div class="info-value">¥156,789</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较上月增长
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">库存预警商品</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>商品名称</th>
+                <th>当前库存</th>
+                <th>预警阈值</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>全自动咖啡机</td>
+                <td>12</td>
+                <td>20</td>
+                <td><span class="status pending">库存不足</span></td>
+                <td><button class="btn btn-primary">补货</button></td>
+            </tr>
+            <tr>
+                <td>智能手表</td>
+                <td>5</td>
+                <td>15</td>
+                <td><span class="status pending">库存不足</span></td>
+                <td><button class="btn btn-primary">补货</button></td>
+            </tr>
+            <tr>
+                <td>纯棉四件套</td>
+                <td>0</td>
+                <td>10</td>
+                <td><span class="status pending">缺货</span></td>
+                <td><button class="btn btn-primary">紧急补货</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

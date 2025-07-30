@@ -1,0 +1,43 @@
+<!-- recharge-query.html -->
+<div class="content-card">
+    <div class="card-title">储值记录查询</div>
+    <div style="padding: 20px;">
+        <div class="search-form">
+            <input type="text" placeholder="客户手机号" style="width: 150px;">
+            <input type="date" placeholder="开始日期">
+            <input type="date" placeholder="结束日期">
+            <select>
+                <option value="">全部门店</option>
+                <option value="1">总店</option>
+                <option value="2">分店1</option>
+            </select>
+            <button class="btn btn-primary">查询</button>
+            <button class="btn btn-success">导出</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>交易时间</th>
+                    <th>客户信息</th>
+                    <th>储值金额</th>
+                    <th>赠送金额</th>
+                    <th>支付方式</th>
+                    <th>门店</th>
+                    <th>操作员</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-07-30 10:00:00</td>
+                    <td>张三 13800138000</td>
+                    <td>¥1000</td>
+                    <td>¥200</td>
+                    <td>微信支付</td>
+                    <td>总店</td>
+                    <td>王店长</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!-- blacklist.html -->
+<div class="content-card">
+    <div class="card-title">黑名单管理</div>
+    <div style="padding: 20px;">
+        <form id="blackForm" style="margin-bottom: 20px;">
+            <input type="text" name="blackName" placeholder="客户姓名/手机号" required style="width: 200px;">
+            <input type="text" name="reason" placeholder="拉黑原因" required style="width: 200px; margin-left:10px;">
+            <button type="submit" class="btn btn-danger" style="margin-left:10px;">加入黑名单</button>
+        </form>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>客户</th>
+                    <th>拉黑原因</th>
+                    <th>操作时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>李四 13900001111</td>
+                    <td>恶意退款</td>
+                    <td>2025-07-30</td>
+                    <td><button class="btn btn-sm btn-success">移除</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

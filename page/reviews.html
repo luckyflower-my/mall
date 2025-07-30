@@ -1,0 +1,150 @@
+<!-- reviews.html -->
+<div class="content-card">
+    <div class="card-title">评价管理概览</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">总评价数</div>
+            <div class="info-value">1,234</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 本月新增 89 条
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">平均评分</div>
+            <div class="info-value">4.6</div>
+            <div class="info-change up">
+                <i class="fas fa-star"></i> 较上月提升 0.1
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">待回复评价</div>
+            <div class="info-value">23</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要及时回复
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">好评率</div>
+            <div class="info-value">94%</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较上月提升 2%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">最新评价</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>客户</th>
+                <th>商品</th>
+                <th>评分</th>
+                <th>评价内容</th>
+                <th>评价时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张明</td>
+                <td>无线蓝牙耳机</td>
+                <td>
+                    <span style="color: #f39c12;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </td>
+                <td>音质很好，续航也不错，值得推荐！</td>
+                <td>2023-10-15 14:30</td>
+                <td><span class="status pending">待回复</span></td>
+                <td><button class="btn btn-primary">回复</button></td>
+            </tr>
+            <tr>
+                <td>李华</td>
+                <td>全自动咖啡机</td>
+                <td>
+                    <span style="color: #f39c12;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </td>
+                <td>操作简单，咖啡味道不错，就是价格稍贵。</td>
+                <td>2023-10-15 13:45</td>
+                <td><span class="status completed">已回复</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+            <tr>
+                <td>王芳</td>
+                <td>纯棉四件套</td>
+                <td>
+                    <span style="color: #f39c12;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </td>
+                <td>质量很好，手感舒适，颜色也很漂亮！</td>
+                <td>2023-10-15 12:20</td>
+                <td><span class="status completed">已回复</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+            <tr>
+                <td>刘强</td>
+                <td>智能手表</td>
+                <td>
+                    <span style="color: #f39c12;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </td>
+                <td>功能还可以，但是电池续航一般。</td>
+                <td>2023-10-15 11:15</td>
+                <td><span class="status pending">待回复</span></td>
+                <td><button class="btn btn-primary">回复</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="content-card">
+    <div class="card-title">评价统计</div>
+    <div style="padding: 20px;">
+        <h3>评分分布</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="color: #2ecc71; margin: 0 0 5px 0;">5星</h4>
+                <p style="margin: 0; font-size: 18px; font-weight: bold;">65%</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #7f8c8d;">802条</p>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="color: #3498db; margin: 0 0 5px 0;">4星</h4>
+                <p style="margin: 0; font-size: 18px; font-weight: bold;">22%</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #7f8c8d;">271条</p>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="color: #f39c12; margin: 0 0 5px 0;">3星</h4>
+                <p style="margin: 0; font-size: 18px; font-weight: bold;">8%</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #7f8c8d;">99条</p>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="color: #e74c3c; margin: 0 0 5px 0;">2星及以下</h4>
+                <p style="margin: 0; font-size: 18px; font-weight: bold;">5%</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #7f8c8d;">62条</p>
+            </div>
+        </div>
+    </div>
+</div> 

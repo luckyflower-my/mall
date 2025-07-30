@@ -1,0 +1,99 @@
+<!-- order-shipped.html -->
+
+<div class="content-card">
+    <div class="card-title">已发货订单概览</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">今日发货</div>
+            <div class="info-value">26</div>
+            <div class="info-change up">
+                <i class="fas fa-truck"></i> 较昨日增加 5
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">在途订单</div>
+            <div class="info-value">42</div>
+            <div class="info-change">
+                <i class="fas fa-shipping-fast"></i> 正常配送
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">平均配送时间</div>
+            <div class="info-value">2.3天</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较上月缩短 0.5天
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">配送满意度</div>
+            <div class="info-value">96%</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较上月提升 2%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">已发货订单列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>订单号</th>
+                <th>客户信息</th>
+                <th>商品信息</th>
+                <th>发货时间</th>
+                <th>物流公司</th>
+                <th>物流状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#ORD-2023-00127</td>
+                <td>
+                    <div>刘强</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">136****5432</div>
+                </td>
+                <td>
+                    <div>无线蓝牙耳机</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>2023-10-15 14:30</td>
+                <td>顺丰速运</td>
+                <td><span class="status shipped">运输中</span></td>
+                <td><button class="btn btn-primary">跟踪</button></td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00126</td>
+                <td>
+                    <div>陈丽</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">135****8765</div>
+                </td>
+                <td>
+                    <div>全自动咖啡机</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>2023-10-15 14:25</td>
+                <td>圆通速递</td>
+                <td><span class="status shipped">运输中</span></td>
+                <td><button class="btn btn-primary">跟踪</button></td>
+            </tr>
+            <tr>
+                <td>#ORD-2023-00125</td>
+                <td>
+                    <div>张伟</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">139****1234</div>
+                </td>
+                <td>
+                    <div>智能手表</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">数量：1</div>
+                </td>
+                <td>2023-10-15 14:20</td>
+                <td>中通快递</td>
+                <td><span class="status completed">已签收</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,48 @@
+<!-- customer-migrate.html -->
+<div class="content-card">
+    <div class="card-title">客户迁移</div>
+    <div style="padding: 20px;">
+        <form id="transferForm">
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">选择客户 <span style="color:red">*</span></label>
+                <select name="customer" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="">请选择客户</option>
+                    <option value="1">客户A</option>
+                    <option value="2">客户B</option>
+                    <option value="3">客户C</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">目标归属人 <span style="color:red">*</span></label>
+                <select name="owner" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="">请选择归属人</option>
+                    <option value="user1">张三</option>
+                    <option value="user2">李四</option>
+                    <option value="user3">王五</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">迁移原因</label>
+                <textarea name="reason" placeholder="请输入迁移原因（可选）" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">确认迁移</button>
+            <button type="button" class="btn" onclick="window.history.back();" style="margin-left: 10px;">取消</button>
+            <div id="transferMsg" style="color: red; margin-top: 10px; display: none;"></div>
+        </form>
+    </div>
+</div>
+<script>
+document.getElementById('transferForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const customer = this.customer.value;
+    const owner = this.owner.value;
+    if (!customer || !owner) {
+        document.getElementById('transferMsg').innerText = '请选择客户和目标归属人';
+        document.getElementById('transferMsg').style.display = 'block';
+        return;
+    }
+    document.getElementById('transferMsg').style.display = 'none';
+    alert('客户迁移成功！（仅演示，无实际迁移功能）');
+    // 这里可以添加实际的迁移逻辑
+});
+</script>

@@ -1,0 +1,81 @@
+<!-- replenish.html -->
+
+<div class="content-card">
+    <div class="card-title">补货管理</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">待补货商品</div>
+            <div class="info-value">8</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要及时处理
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">今日补货</div>
+            <div class="info-value">12</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增加 3
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">补货金额</div>
+            <div class="info-value">¥15,680</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增长 8%
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">供应商</div>
+            <div class="info-value">6</div>
+            <div class="info-change">
+                <i class="fas fa-handshake"></i> 合作关系良好
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">待补货商品列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>商品名称</th>
+                <th>当前库存</th>
+                <th>安全库存</th>
+                <th>建议补货量</th>
+                <th>供应商</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>全自动咖啡机</td>
+                <td>12</td>
+                <td>20</td>
+                <td>30</td>
+                <td>咖啡设备供应商</td>
+                <td><span class="status pending">待补货</span></td>
+                <td><button class="btn btn-primary">补货</button></td>
+            </tr>
+            <tr>
+                <td>智能手表</td>
+                <td>5</td>
+                <td>15</td>
+                <td>25</td>
+                <td>数码科技供应商</td>
+                <td><span class="status pending">待补货</span></td>
+                <td><button class="btn btn-primary">补货</button></td>
+            </tr>
+            <tr>
+                <td>纯棉四件套</td>
+                <td>0</td>
+                <td>10</td>
+                <td>50</td>
+                <td>家纺用品供应商</td>
+                <td><span class="status pending">紧急补货</span></td>
+                <td><button class="btn" style="background: #e74c3c; color: white;">紧急补货</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

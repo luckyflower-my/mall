@@ -1,0 +1,57 @@
+<!-- scene-marketing.html -->
+<div class="content-card">
+    <div class="card-title">场景营销</div>
+    <div style="padding: 20px;">
+        <form id="sceneForm" style="margin-bottom: 20px;">
+            <input type="text" name="sceneName" placeholder="营销场景名称" required style="width: 200px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <select name="sceneType" required style="width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-left:10px;">
+                <option value="">选择类型</option>
+                <option value="节日">节日</option>
+                <option value="新客">新客</option>
+                <option value="促销">促销</option>
+            </select>
+            <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建场景</button>
+        </form>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr style="background:#f5f5f5;">
+                    <th style="padding:8px;">场景名称</th>
+                    <th style="padding:8px;">类型</th>
+                    <th style="padding:8px;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>双十一大促</td>
+                    <td>促销</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>新用户欢迎</td>
+                    <td>新客</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="sceneMsg" style="color: red; margin-top: 10px; display: none;"></div>
+    </div>
+</div>
+<script>
+document.getElementById('sceneForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.sceneName.value.trim();
+    const type = this.sceneType.value;
+    if (!name || !type) {
+        document.getElementById('sceneMsg').innerText = '请填写场景名称和类型';
+        document.getElementById('sceneMsg').style.display = 'block';
+        return;
+    }
+    document.getElementById('sceneMsg').style.display = 'none';
+    alert('场景添加成功！（仅演示）');
+    // 这里可以添加实际的添加逻辑
+});
+</script>

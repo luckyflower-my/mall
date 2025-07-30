@@ -1,0 +1,95 @@
+<!-- logistics.html -->
+
+<div class="content-card">
+    <div class="card-title">物流设置</div>
+    <div style="padding: 20px;">
+        <h3>物流公司配置</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <p>管理合作的物流公司信息</p>
+            <button class="btn btn-primary">
+                <i class="fas fa-plus"></i> 添加物流公司
+            </button>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>物流公司</th>
+                    <th>合作状态</th>
+                    <th>配送范围</th>
+                    <th>收费标准</th>
+                    <th>联系方式</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>顺丰速运</td>
+                    <td><span class="status completed">合作中</span></td>
+                    <td>全国</td>
+                    <td>首重12元，续重2元/kg</td>
+                    <td>400-811-1111</td>
+                    <td>
+                        <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                        <button class="btn" style="background: #e74c3c; color: white;">停用</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>圆通速递</td>
+                    <td><span class="status completed">合作中</span></td>
+                    <td>全国</td>
+                    <td>首重8元，续重1.5元/kg</td>
+                    <td>400-889-0953</td>
+                    <td>
+                        <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                        <button class="btn" style="background: #e74c3c; color: white;">停用</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中通快递</td>
+                    <td><span class="status completed">合作中</span></td>
+                    <td>全国</td>
+                    <td>首重10元，续重1.8元/kg</td>
+                    <td>400-827-0270</td>
+                    <td>
+                        <button class="btn btn-primary" style="margin-right: 5px;">编辑</button>
+                        <button class="btn" style="background: #e74c3c; color: white;">停用</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">配送区域设置</div>
+    <div style="padding: 20px;">
+        <h3>配送区域管理</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <h4>华东地区</h4>
+                <p>配送时间：1-2天</p>
+                <p>运费：免费</p>
+                <p>状态：<span class="status completed">正常</span></p>
+            </div>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <h4>华北地区</h4>
+                <p>配送时间：2-3天</p>
+                <p>运费：¥5</p>
+                <p>状态：<span class="status completed">正常</span></p>
+            </div>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <h4>华南地区</h4>
+                <p>配送时间：2-3天</p>
+                <p>运费：¥8</p>
+                <p>状态：<span class="status completed">正常</span></p>
+            </div>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <h4>其他地区</h4>
+                <p>配送时间：3-5天</p>
+                <p>运费：¥12</p>
+                <p>状态：<span class="status completed">正常</span></p>
+            </div>
+        </div>
+    </div>
+</div>

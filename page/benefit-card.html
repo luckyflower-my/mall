@@ -1,0 +1,52 @@
+<!-- benefit-card.html -->
+<div class="content-card">
+    <div class="card-title">权益卡管理</div>
+    <div style="padding: 20px;">
+        <form id="cardForm" style="margin-bottom: 20px;">
+            <input type="text" name="cardName" placeholder="权益卡名称" required style="width: 200px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <input type="number" name="cardValue" placeholder="面值/积分" required style="width:120px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-left:10px;">
+            <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建权益卡</button>
+        </form>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr style="background:#f5f5f5;">
+                    <th style="padding:8px;">权益卡名称</th>
+                    <th style="padding:8px;">面值/积分</th>
+                    <th style="padding:8px;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>专属折扣卡</td>
+                    <td>100元</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>积分兑换卡</td>
+                    <td>500积分</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="cardMsg" style="color: red; margin-top: 10px; display: none;"></div>
+    </div>
+</div>
+<script>
+document.getElementById('cardForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.cardName.value.trim();
+    const value = this.cardValue.value;
+    if (!name || !value) {
+        document.getElementById('cardMsg').innerText = '请填写权益卡名称和面值/积分';
+        document.getElementById('cardMsg').style.display = 'block';
+        return;
+    }
+    document.getElementById('cardMsg').style.display = 'none';
+    alert('权益卡添加成功！（仅演示）');
+    // 这里可以添加实际的添加逻辑
+});
+</script>

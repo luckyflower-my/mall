@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商家后台管理系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+    
+
+<body>
+    <!-- 左侧一级菜单 -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-store"></i>
+        </div>
+
+        <div class="menu-item active" data-menu="dashboard">
+            <i class="fas fa-chart-line"></i>
+            <span>概览</span>
+        </div>
+
+        <div class="menu-item" data-menu="products">
+            <i class="fas fa-store"></i>
+            <span>商城</span>
+        </div>
+
+        <div class="menu-item" data-menu="orders">
+            <i class="fas fa-shopping-bag"></i>
+            <span>订单</span>
+        </div>
+
+        <div class="menu-item" data-menu="customers">
+            <i class="fas fa-users"></i>
+            <span>客户</span>
+        </div>
+
+        <div class="menu-item" data-menu="marketing">
+            <i class="fas fa-bullhorn"></i>
+            <span>营销</span>
+        </div>
+
+        <div class="menu-item" data-menu="settings">
+            <i class="fas fa-cog"></i>
+            <span>设置</span>
+        </div>
+    </div>
+
+    <!-- 中间二级菜单 (动态生成) -->
+    <div class="sub-sidebar" id="subSidebar">
+        <!-- 二级菜单内容会通过JS动态生成 -->
+    </div>
+
+    <button class="mobile-submenu-toggle" id="mobileSubmenuToggle">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- 右侧内容区域 -->
+    <div class="content">
+        <!-- 顶部操作栏 -->
+        <div class="topbar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="搜索订单、商品、客户...">
+            </div>
+
+            <div class="topbar-actions">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge">5</div>
+                </div>
+                <div class="notification">
+                    <i class="fas fa-envelope"></i>
+                    <div class="notification-badge">12</div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">张</div>
+                    <div class="user-name">张经理</div>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区域 -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1 class="header-title" id="contentTitle">商家管理控制台</h1>
+                <p class="header-subtitle" id="contentSubtitle">今日数据更新于 14:30:25</p>
+            </div>
+
+            <!-- 动态内容区域 -->
+            <div id="dynamicContent">
+                <!-- 内容会通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        
+    
+</body>
+
+</html>

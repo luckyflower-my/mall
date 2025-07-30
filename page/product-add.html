@@ -1,0 +1,80 @@
+<!-- product-add.html -->
+
+<div class="content-card">
+    <div class="card-title">添加新商品</div>
+    <div style="padding: 20px;">
+        <form id="productForm">
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品名称 <span style="color:red">*</span></label>
+                <input type="text" name="name" placeholder="请输入商品名称" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品分类 <span style="color:red">*</span></label>
+                <select name="category" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="">请选择分类</option>
+                    <option>数码电子</option>
+                    <option>家用电器</option>
+                    <option>家居家纺</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品价格 <span style="color:red">*</span></label>
+                <input type="number" name="price" min="0" step="0.01" placeholder="请输入价格" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">库存数量 <span style="color:red">*</span></label>
+                <input type="number" name="stock" min="0" placeholder="请输入库存数量" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品图片</label>
+                <input type="file" name="image" accept="image/*" style="display: block; margin-bottom: 10px;">
+                <img id="preview" src="" alt="" style="max-width: 200px; display: none; border: 1px solid #eee; border-radius: 4px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品状态</label>
+                <select name="status" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="on">上架</option>
+                    <option value="off">下架</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 500;">商品描述</label>
+                <textarea name="desc" placeholder="请输入商品描述" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">保存商品</button>
+            <div id="formMsg" style="color: red; margin-top: 10px; display: none;"></div>
+        </form>
+    </div>
+</div>
+<script>
+    // 图片预览
+    document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const img = document.getElementById('preview');
+                img.src = evt.target.result;
+                img.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // 简单表单校验
+    document.getElementById('productForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = this.name.value.trim();
+        const category = this.category.value;
+        const price = this.price.value;
+        const stock = this.stock.value;
+        if (!name || !category || !price || !stock) {
+            document.getElementById('formMsg').innerText = '请填写所有必填项';
+            document.getElementById('formMsg').style.display = 'block';
+            return;
+        }
+        document.getElementById('formMsg').style.display = 'none';
+        alert('商品已保存（仅演示，无实际保存功能）');
+        // 这里可以添加实际的保存逻辑
+    });
+</script>

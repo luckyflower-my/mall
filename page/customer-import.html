@@ -1,0 +1,116 @@
+<!-- customer-import.html -->
+<div class="content-card">
+    <div class="card-title">客户导入管理</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">今日导入</div>
+            <div class="info-value">156</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增加 23
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">总客户数</div>
+            <div class="info-value">2,456</div>
+            <div class="info-change up">
+                <i class="fas fa-users"></i> 持续增长
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">导入成功率</div>
+            <div class="info-value">98.5%</div>
+            <div class="info-change up">
+                <i class="fas fa-check-circle"></i> 质量良好
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">重复客户</div>
+            <div class="info-value">12</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要处理
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">客户导入</div>
+    <div style="padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3>导入方式</h3>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-primary">
+                    <i class="fas fa-download"></i> 下载模板
+                </button>
+                <button class="btn" style="background: #27ae60; color: white;">
+                    <i class="fas fa-upload"></i> 批量导入
+                </button>
+            </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <h4>导入说明</h4>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>支持 Excel 格式文件导入</li>
+                <li>请按照模板格式填写客户信息</li>
+                <li>必填字段：姓名、手机号、邮箱</li>
+                <li>系统会自动去重和验证数据</li>
+            </ul>
+        </div>
+        
+        <div style="border: 2px dashed #ddd; padding: 40px; text-align: center; border-radius: 8px;">
+            <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: #bdc3c7; margin-bottom: 15px;"></i>
+            <h4>拖拽文件到此处或点击上传</h4>
+            <p style="color: #7f8c8d; margin: 10px 0;">支持 .xlsx, .xls, .csv 格式</p>
+            <button class="btn btn-primary">
+                <i class="fas fa-folder-open"></i> 选择文件
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">最近导入记录</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>导入时间</th>
+                <th>文件名</th>
+                <th>导入数量</th>
+                <th>成功数量</th>
+                <th>失败数量</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2023-10-15 14:30</td>
+                <td>客户数据_20231015.xlsx</td>
+                <td>156</td>
+                <td>154</td>
+                <td>2</td>
+                <td><span class="status completed">成功</span></td>
+                <td><button class="btn btn-primary">查看详情</button></td>
+            </tr>
+            <tr>
+                <td>2023-10-15 10:15</td>
+                <td>新客户导入.csv</td>
+                <td>89</td>
+                <td>87</td>
+                <td>2</td>
+                <td><span class="status completed">成功</span></td>
+                <td><button class="btn btn-primary">查看详情</button></td>
+            </tr>
+            <tr>
+                <td>2023-10-14 16:45</td>
+                <td>客户名单.xlsx</td>
+                <td>234</td>
+                <td>230</td>
+                <td>4</td>
+                <td><span class="status completed">成功</span></td>
+                <td><button class="btn btn-primary">查看详情</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div> 

@@ -1,0 +1,100 @@
+<!-- order-refund.html -->
+
+<div class="content-card">
+    <div class="card-title">退款管理概览</div>
+    <div class="card-content">
+        <div class="info-box">
+            <div class="info-title">待处理退款</div>
+            <div class="info-value">8</div>
+            <div class="info-change down">
+                <i class="fas fa-exclamation-circle"></i> 需要及时处理
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">今日退款</div>
+            <div class="info-value">12</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增加 3
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">退款金额</div>
+            <div class="info-value">¥3,456</div>
+            <div class="info-change up">
+                <i class="fas fa-arrow-up"></i> 较昨日增加 ¥1,200
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-title">退款率</div>
+            <div class="info-value">2.3%</div>
+            <div class="info-change down">
+                <i class="fas fa-arrow-down"></i> 较上月下降 0.5%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-card">
+    <div class="card-title">退款申请列表</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>退款单号</th>
+                <th>原订单号</th>
+                <th>客户信息</th>
+                <th>退款金额</th>
+                <th>申请时间</th>
+                <th>退款原因</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#REF-2023-001</td>
+                <td>#ORD-2023-00125</td>
+                <td>
+                    <div>张明</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">139****1234</div>
+                </td>
+                <td>¥568.00</td>
+                <td>2023-10-15 14:30</td>
+                <td>商品质量问题</td>
+                <td><span class="status pending">待审核</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">审核</button>
+                    <button class="btn" style="background: #e74c3c; color: white;">拒绝</button>
+                </td>
+            </tr>
+            <tr>
+                <td>#REF-2023-002</td>
+                <td>#ORD-2023-00124</td>
+                <td>
+                    <div>李华</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">138****5678</div>
+                </td>
+                <td>¥1,248.00</td>
+                <td>2023-10-15 13:45</td>
+                <td>客户取消订单</td>
+                <td><span class="status completed">已退款</span></td>
+                <td><button class="btn btn-primary">查看</button></td>
+            </tr>
+            <tr>
+                <td>#REF-2023-003</td>
+                <td>#ORD-2023-00123</td>
+                <td>
+                    <div>王芳</div>
+                    <div style="font-size: 12px; color: #7f8c8d;">137****9876</div>
+                </td>
+                <td>¥356.00</td>
+                <td>2023-10-15 12:20</td>
+                <td>发货延迟</td>
+                <td><span class="status pending">待处理</span></td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 5px;">处理</button>
+                    <button class="btn" style="background: #27ae60; color: white;">同意</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

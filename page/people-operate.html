@@ -1,0 +1,57 @@
+<!-- people-operate.html -->
+<div class="content-card">
+    <div class="card-title">人群运营</div>
+    <div style="padding: 20px;">
+        <form id="crowdForm" style="margin-bottom: 20px;">
+            <input type="text" name="crowdName" placeholder="人群名称" required style="width: 200px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <select name="crowdType" required style="width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-left:10px;">
+                <option value="">选择类型</option>
+                <option value="活跃">活跃</option>
+                <option value="沉睡">沉睡</option>
+                <option value="高价值">高价值</option>
+            </select>
+            <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建人群</button>
+        </form>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr style="background:#f5f5f5;">
+                    <th style="padding:8px;">人群名称</th>
+                    <th style="padding:8px;">类型</th>
+                    <th style="padding:8px;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>高价值客户</td>
+                    <td>高价值</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>沉睡用户</td>
+                    <td>沉睡</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="crowdMsg" style="color: red; margin-top: 10px; display: none;"></div>
+    </div>
+</div>
+<script>
+document.getElementById('crowdForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.crowdName.value.trim();
+    const type = this.crowdType.value;
+    if (!name || !type) {
+        document.getElementById('crowdMsg').innerText = '请填写人群名称和类型';
+        document.getElementById('crowdMsg').style.display = 'block';
+        return;
+    }
+    document.getElementById('crowdMsg').style.display = 'none';
+    alert('人群添加成功！（仅演示）');
+    // 这里可以添加实际的添加逻辑
+});
+</script>

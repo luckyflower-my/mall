@@ -1,0 +1,52 @@
+<!-- recharge-rule.html -->
+<div class="content-card">
+    <div class="card-title">储值规则管理</div>
+    <div style="padding: 20px;">
+        <form id="rechargeRuleForm" style="margin-bottom: 20px;">
+            <div class="form-group">
+                <label>储值金额</label>
+                <input type="number" name="amount" required style="width: 200px;">
+            </div>
+            <div class="form-group">
+                <label>赠送金额</label>
+                <input type="number" name="bonus" required style="width: 200px;">
+            </div>
+            <div class="form-group">
+                <label>有效期(天)</label>
+                <input type="number" name="validDays" required style="width: 200px;">
+            </div>
+            <div class="form-group">
+                <label>状态</label>
+                <select name="status">
+                    <option value="1">启用</option>
+                    <option value="0">停用</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">添加规则</button>
+        </form>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>储值金额</th>
+                    <th>赠送金额</th>
+                    <th>有效期</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>365天</td>
+                    <td>启用</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">编辑</button>
+                        <button class="btn btn-sm btn-danger">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
