@@ -307,20 +307,17 @@ body {
   border-collapse: collapse;
 }
 
-.data-table th {
+.data-table th,
+.data-table td {
   text-align: left;
-  padding: 12px 15px;
-  font-weight: 600;
-  color: #7f8c8d;
-  font-size: 13px;
-  border-bottom: 1px solid #eee;
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
 }
 
-.data-table td {
-  padding: 15px;
-  border-bottom: 1px solid #f5f5f5;
-  color: #555;
-  font-size: 14px;
+.data-table th:last-child,
+.data-table td:last-child {
+  text-align: center;
 }
 
 .data-table tr:last-child td {

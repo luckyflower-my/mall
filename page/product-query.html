@@ -53,5 +53,49 @@
                 <i class="fas fa-trash"></i> 删除
             </button>
         </div>
+
+        <form style="display:flex; gap:10px; margin-top:20px;">
+            <input type="text" placeholder="商品名称/编号" style="padding:8px; border:1px solid #ddd; border-radius:4px;">
+            <select style="padding:8px; border:1px solid #ddd; border-radius:4px;">
+                <option>全部分类</option>
+                <option>数码电子</option>
+                <option>家用电器</option>
+            </select>
+            <button class="btn btn-primary" type="button" onclick="alert('查询（仅演示）')">查询</button>
+        </form>
+        <table class="data-table" style="width:100%; border-collapse:collapse; margin-top:20px;">
+            <thead>
+                <tr style="background:#f2f2f2; text-align:left;">
+                    <th style="padding:10px; border:1px solid #ddd;">商品编号</th>
+                    <th style="padding:10px; border:1px solid #ddd;">商品名称</th>
+                    <th style="padding:10px; border:1px solid #ddd;">分类</th>
+                    <th style="padding:10px; border:1px solid #ddd;">库存</th>
+                    <th style="padding:10px; border:1px solid #ddd;">状态</th>
+                    <th style="padding:10px; border:1px solid #ddd;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">P-10025</td>
+                    <td style="padding:10px; border:1px solid #ddd;">高端无线蓝牙耳机</td>
+                    <td style="padding:10px; border:1px solid #ddd;">数码电子</td>
+                    <td style="padding:10px; border:1px solid #ddd;">68</td>
+                    <td style="padding:10px; border:1px solid #ddd;"><span class="status completed">在售</span></td>
+                    <td style="padding:10px; border:1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-primary">详情</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">P-10024</td>
+                    <td style="padding:10px; border:1px solid #ddd;">全自动咖啡机</td>
+                    <td style="padding:10px; border:1px solid #ddd;">家用电器</td>
+                    <td style="padding:10px; border:1px solid #ddd;">12</td>
+                    <td style="padding:10px; border:1px solid #ddd;"><span class="status shipped">在售</span></td>
+                    <td style="padding:10px; border:1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-primary">详情</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

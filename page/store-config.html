@@ -55,3 +55,33 @@
         </div>
     </div>
 </div>
+<div class="content-card">
+    <div class="card-title">店铺设置</div>
+    <div style="padding: 20px; max-width: 500px;">
+        <form id="storeForm">
+            <div class="form-group">
+                <label>店铺名称</label>
+                <input type="text" name="storeName" required style="width:100%;">
+            </div>
+            <div class="form-group">
+                <label>店铺LOGO</label>
+                <input type="file" name="storeLogo" style="width:100%;">
+            </div>
+            <div class="form-group">
+                <label>店铺简介</label>
+                <textarea name="storeDesc" rows="3" style="width:100%;"></textarea>
+            </div>
+            <div class="form-group">
+                <label>客服电话</label>
+                <input type="text" name="storePhone" style="width:100%;">
+            </div>
+            <button type="submit" class="btn btn-primary">保存设置</button>
+        </form>
+    </div>
+</div>
+<script>
+document.getElementById('storeForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('保存成功！（仅演示）');
+});
+</script>

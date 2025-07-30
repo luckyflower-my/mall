@@ -53,5 +53,47 @@
                 <i class="fas fa-trash"></i> 删除
             </button>
         </div>
+        
+        <form style="display:flex; gap:10px; margin-top:20px;">
+            <input type="text" placeholder="活动名称" style="padding:8px; border:1px solid #ddd; border-radius:4px;">
+            <select style="padding:8px; border:1px solid #ddd; border-radius:4px;">
+                <option>全部类型</option>
+                <option>满减</option>
+                <option>优惠券</option>
+                <option>抽奖</option>
+            </select>
+            <button class="btn btn-primary" type="button" onclick="alert('查询（仅演示）')">查询</button>
+        </form>
+        <table class="data-table" style="width:100%; border-collapse:collapse; margin-top:10px;">
+            <thead>
+                <tr style="background:#f2f2f2; text-align:left;">
+                    <th style="padding:10px; border:1px solid #ddd;">活动名称</th>
+                    <th style="padding:10px; border:1px solid #ddd;">类型</th>
+                    <th style="padding:10px; border:1px solid #ddd;">状态</th>
+                    <th style="padding:10px; border:1px solid #ddd;">参与人数</th>
+                    <th style="padding:10px; border:1px solid #ddd;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">夏日满减</td>
+                    <td style="padding:10px; border:1px solid #ddd;">满减</td>
+                    <td style="padding:10px; border:1px solid #ddd;"><span class="status completed" style="color:#27ae60;">进行中</span></td>
+                    <td style="padding:10px; border:1px solid #ddd;">1200</td>
+                    <td style="padding:10px; border:1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-primary" style="padding:5px 10px; font-size:14px;">详情</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ddd;">新客专享券</td>
+                    <td style="padding:10px; border:1px solid #ddd;">优惠券</td>
+                    <td style="padding:10px; border:1px solid #ddd;"><span class="status pending" style="color:#f39c12;">未开始</span></td>
+                    <td style="padding:10px; border:1px solid #ddd;">350</td>
+                    <td style="padding:10px; border:1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-primary" style="padding:5px 10px; font-size:14px;">详情</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

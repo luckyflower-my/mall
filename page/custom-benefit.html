@@ -1,33 +1,33 @@
 <!-- custom-benefit.html -->
 <div class="content-card">
-    <div class="card-title">自定义权益</div>
+    <div class="card-title">自定义权益管理</div>
     <div style="padding: 20px;">
-        <form id="benefitForm" style="margin-bottom: 20px;">
-            <input type="text" name="benefitName" placeholder="权益名称" required style="width: 200px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-            <textarea name="benefitDesc" placeholder="权益描述" rows="2" required style="width: 300px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-left:10px;"></textarea>
-            <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建权益</button>
+        <form id="benefitForm" style="margin-bottom: 20px; display: flex; gap: 10px;">
+            <input type="text" name="benefitName" placeholder="权益名称" required style="flex:1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <input type="text" name="benefitContent" placeholder="权益内容" required style="flex:2; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <button type="submit" class="btn btn-primary">添加权益</button>
         </form>
-        <table style="width:100%; border-collapse:collapse;">
+        <table class="data-table">
             <thead>
-                <tr style="background:#f5f5f5;">
-                    <th style="padding:8px;">权益名称</th>
-                    <th style="padding:8px;">描述</th>
-                    <th style="padding:8px;">操作</th>
+                <tr>
+                    <th style="width:35%;">权益名称</th>
+                    <th style="width:45%;">权益内容</th>
+                    <th style="width:20%;">操作</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="benefitList">
                 <tr>
-                    <td>生日专属礼</td>
-                    <td>会员生日当天赠送专属礼品</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    <td>生日特权</td>
+                    <td>生日当月赠送50积分</td>
+                    <td style="text-align:center;">
+                        <button class="btn btn-danger btn-sm">删除</button>
                     </td>
                 </tr>
                 <tr>
                     <td>专属客服</td>
-                    <td>享受专属客服服务</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    <td>享受一对一专属客服服务</td>
+                    <td style="text-align:center;">
+                        <button class="btn btn-danger btn-sm">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -39,14 +39,14 @@
 document.getElementById('benefitForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = this.benefitName.value.trim();
-    const desc = this.benefitDesc.value.trim();
-    if (!name || !desc) {
-        document.getElementById('benefitMsg').innerText = '请填写权益名称和描述';
+    const content = this.benefitContent.value.trim();
+    if (!name || !content) {
+        document.getElementById('benefitMsg').innerText = '请填写权益名称和内容';
         document.getElementById('benefitMsg').style.display = 'block';
         return;
     }
     document.getElementById('benefitMsg').style.display = 'none';
-    alert('自定义权益添加成功！（仅演示）');
+    alert('权益添加成功！（仅演示）');
     // 这里可以添加实际的添加逻辑
 });
 </script>

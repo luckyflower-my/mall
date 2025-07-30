@@ -53,5 +53,37 @@
                 <i class="fas fa-trash"></i> 删除
             </button>
         </div>
+        
+        <table class="data-table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background: #f2f2f2; text-align: left;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">提醒类型</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">对象</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">到期时间</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">提醒状态</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">储值到期</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">张三</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">2025-08-01</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><span class="status pending" style="color: #f39c12;">未提醒</span></td>
+                    <td style="padding: 10px; border: 1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-primary" onclick="alert('已发送提醒（仅演示）')">发送提醒</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">优惠券到期</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">李四</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">2025-08-05</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><span class="status completed" style="color: #27ae60;">已提醒</span></td>
+                    <td style="padding: 10px; border: 1px solid #ddd; text-align:center;">
+                        <button class="btn btn-sm btn-secondary" disabled>已发送</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

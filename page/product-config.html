@@ -55,3 +55,32 @@
         </div>
     </div>
 </div>
+<div class="content-card">
+    <div class="card-title">商品设置</div>
+    <div style="padding: 20px; max-width: 500px;">
+        <form id="productConfigForm">
+            <div class="form-group">
+                <label>商品上架审核</label>
+                <select name="audit" style="width:100%;">
+                    <option value="1">需要审核</option>
+                    <option value="0">无需审核</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>默认库存预警值</label>
+                <input type="number" name="stockWarning" style="width:100%;">
+            </div>
+            <div class="form-group">
+                <label>商品标签</label>
+                <input type="text" name="tags" style="width:100%;" placeholder="如：新品,热卖">
+            </div>
+            <button type="submit" class="btn btn-primary">保存设置</button>
+        </form>
+    </div>
+</div>
+<script>
+document.getElementById('productConfigForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('保存成功！（仅演示）');
+});
+</script>
