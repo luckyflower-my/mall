@@ -12,27 +12,27 @@
             </select>
             <button type="submit" class="btn btn-primary" style="margin-left:10px;">新建场景</button>
         </form>
-        <table style="width:100%; border-collapse:collapse;">
+        <table class="data-table">
             <thead>
-                <tr style="background:#f5f5f5;">
-                    <th style="padding:8px;">场景名称</th>
-                    <th style="padding:8px;">类型</th>
-                    <th style="padding:8px;">操作</th>
+                <tr>
+                    <th style="width:50%;">场景名称</th>
+                    <th style="width:30%;">类型</th>
+                    <th style="width:20%;">操作</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="sceneList">
                 <tr>
-                    <td>双十一大促</td>
-                    <td>促销</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    <td>节日促销</td>
+                    <td>营销活动</td>
+                    <td style="text-align:center;">
+                        <button class="btn btn-danger btn-sm">删除</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>新用户欢迎</td>
-                    <td>新客</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="alert('删除成功')">删除</button>
+                    <td>会员日</td>
+                    <td>会员专属</td>
+                    <td style="text-align:center;">
+                        <button class="btn btn-danger btn-sm">删除</button>
                     </td>
                 </tr>
             </tbody>

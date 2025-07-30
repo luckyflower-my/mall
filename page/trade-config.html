@@ -53,5 +53,33 @@
                 <i class="fas fa-trash"></i> 删除
             </button>
         </div>
+        
+        <div style="padding: 20px; max-width: 500px;">
+            <form id="tradeConfigForm">
+                <div class="form-group">
+                    <label>支持支付方式</label>
+                    <select name="payType" style="width:100%;">
+                        <option value="all">全部</option>
+                        <option value="wechat">微信</option>
+                        <option value="alipay">支付宝</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>自动关闭未付款订单（分钟）</label>
+                    <input type="number" name="autoClose" style="width:100%;">
+                </div>
+                <div class="form-group">
+                    <label>自动确认收货（天）</label>
+                    <input type="number" name="autoConfirm" style="width:100%;">
+                </div>
+                <button type="submit" class="btn btn-primary">保存设置</button>
+            </form>
+        </div>
     </div>
 </div>
+<script>
+document.getElementById('tradeConfigForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('保存成功！（仅演示）');
+});
+</script>

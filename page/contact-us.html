@@ -53,5 +53,33 @@
                 <i class="fas fa-trash"></i> 删除
             </button>
         </div>
+        
+        <p>如有任何疑问或合作意向，请通过以下方式联系我们：</p>
+        <ul style="margin: 10px 0 20px 20px;">
+            <li>客服电话：400-888-8888</li>
+            <li>客服邮箱：service@example.com</li>
+            <li>公司地址：上海市浦东新区张江高科路88号</li>
+        </ul>
+        <form id="contactForm" style="max-width: 400px;">
+            <div class="form-group">
+                <label>您的姓名</label>
+                <input type="text" name="name" required style="width:100%;">
+            </div>
+            <div class="form-group">
+                <label>联系方式</label>
+                <input type="text" name="contact" required style="width:100%;">
+            </div>
+            <div class="form-group">
+                <label>留言内容</label>
+                <textarea name="message" rows="3" required style="width:100%;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">提交</button>
+        </form>
     </div>
 </div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('感谢您的留言，我们会尽快联系您！（仅演示）');
+});
+</script>
